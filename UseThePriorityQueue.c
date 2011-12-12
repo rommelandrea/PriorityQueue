@@ -1,8 +1,7 @@
 /* 
  * File:   UseThePriorityQueue.c
- * Author: rommel
+ * Author: Andrea Romanello
  *
- * Created on December 12, 2011, 3:42 PM
  */
 
 #include <stdio.h>
