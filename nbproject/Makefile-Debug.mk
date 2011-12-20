@@ -34,7 +34,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/UseThePriorityQueue.o
+	${OBJECTDIR}/UseThePriorityQueue.o \
+	${OBJECTDIR}/ThePriorityQueue.o
 
 
 # C Compiler Flags
@@ -55,16 +56,21 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/priorityqueu
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/priorityqueue
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/priorityqueu: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/priorityqueue: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/priorityqueu ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/priorityqueue ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/UseThePriorityQueue.o: UseThePriorityQueue.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/UseThePriorityQueue.o UseThePriorityQueue.c
+
+${OBJECTDIR}/ThePriorityQueue.o: ThePriorityQueue.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/ThePriorityQueue.o ThePriorityQueue.c
 
 # Subprojects
 .build-subprojects:
@@ -72,7 +78,7 @@ ${OBJECTDIR}/UseThePriorityQueue.o: UseThePriorityQueue.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/priorityqueu
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/priorityqueue
 
 # Subprojects
 .clean-subprojects:
